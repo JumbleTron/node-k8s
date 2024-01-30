@@ -5,7 +5,6 @@ metadata:
 spec:
   containers:
     - name: app
-      image: nodejs-demo
-      imagePullPolicy: Never
+      image: grzekie/node-app:latest
       ports:
         - containerPort: 3000
