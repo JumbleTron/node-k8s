@@ -19,3 +19,15 @@ kubectl apply -f ./k8s/app-pod.yaml
 ```
 kubectl port-forward app 3000:3000
 ```
+
+## Remove all data from minikube
+
+```
+minikube delete --all
+```
+
+## Remove everything from Kubernetes
+
+```
+kubectl delete pods,deployments,rs -A --all
+```

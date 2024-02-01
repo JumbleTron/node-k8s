@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: cart-service-rs
+  labels:
+    app: cart-service
+    tier: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cart-service
+  template:
+    metadata:
+      labels:
+        app: cart-service
+        tier: backend
+    spec:
+      containers:
+        - name: cart-service
+          image: grzekie/node-app:latest
+          ports:
+            - containerPort: 3000
