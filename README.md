@@ -1,5 +1,10 @@
 # Kubernetes nodejs integrations
 
+The primary objective of this repository is to provide developers with hands-on experience in deploying and scaling applications using Kubernetes. 
+
+The repository contains a set of step-by-step instructions, accompanied by code samples, that guide users through the entire process of setting up a Kubernetes cluster, deploying the Node.js application, and configuring various Kubernetes features.
+
+
 ## Build and push docker image
 
 ```
@@ -8,25 +13,48 @@ docker tag node-app:latest docker_hub_repo:latest
 docker push docker_hub_repo:latest
 ```
 
-## Create nodejs pod
+## Pods
+
+### Create nodejs pod
 
 ```
 kubectl apply -f ./k8s/app-pod.yaml
 ```
 
-## Port forward
+### Delete nodejs pod
+
+```
+kubectl delete -f ./k8s/app-pod.yaml
+```
+
+### Port forward
 
 ```
 kubectl port-forward app 3000:3000
 ```
 
-## Remove all data from minikube
+## ReplicaSet
+
+### Create replicaSet
+```
+kubectl apply -f ./k8s/app-replicaset.yaml
+```
+
+### Delete replicaSet
+
+```
+kubectl delete -f ./k8s/app-replicaset.yaml
+```
+
+## Cleaning
+
+### Remove all data from minikube
 
 ```
 minikube delete --all
 ```
 
-## Remove everything from Kubernetes
+### Remove everything from Kubernetes
 
 ```
 kubectl delete pods,deployments,rs -A --all
