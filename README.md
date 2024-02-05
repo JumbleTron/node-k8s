@@ -62,8 +62,15 @@ kubectl delete -f ./k8s/app-deployment.yaml
 ## Ingress
 
 ### Enable ingress for minikube
+
 ```
 minikube addons enable ingress
+```
+
+### Open tunnel for minikube
+
+```
+minikube tunnel
 ```
 
 ## Cleaning

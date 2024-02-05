@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cart-service
+  name: cart-service-deployment
   labels:
     app: cart-service
     tier: backend
@@ -22,7 +22,7 @@ spec:
         tier: backend
     spec:
       containers:
-        - name: cart-service
-          image: grzekie/node-app:latest
-          #ports:
-          #  - containerPort: 3000
+        - name: cart-service-container
+          image: kielniakodu/k8s-node-app:0.0.2
+          ports:
+            - containerPort: 3000
