@@ -46,6 +46,33 @@ kubectl apply -f ./k8s/app-replicaset.yaml
 kubectl delete -f ./k8s/app-replicaset.yaml
 ```
 
+## Deployment
+
+### Create deployment
+```
+kubectl apply -f ./k8s/app-deployment.yaml
+```
+
+### Delete deployment
+
+```
+kubectl delete -f ./k8s/app-deployment.yaml
+```
+
+## Ingress
+
+### Enable ingress for minikube
+
+```
+minikube addons enable ingress
+```
+
+### Open tunnel for minikube
+
+```
+minikube tunnel
+```
+
 ## Cleaning
 
 ### Remove all data from minikube
