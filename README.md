@@ -21,6 +21,11 @@ docker push docker_hub_repo:latest
 kubectl apply -f ./k8s/app-pod.yaml
 ```
 
+### Port forwart to ingress
+```
+kubectl port-forward pod/cart-service 8080:3000
+```
+
 ### Delete nodejs pod
 
 ```
@@ -85,4 +90,24 @@ minikube delete --all
 
 ```
 kubectl delete pods,deployments,rs -A --all
+```
+
+## Helm
+
+### Create empty chart
+
+```
+helm create helm-chart
+```
+
+### Install chart
+
+```
+cd ./helm
+helm install cart-service .
+```
+
+### uninstall chart
+```
+helm uninstall cart-service 
 ```

@@ -1,0 +1,10 @@
+replicaCount: 2
+image:
+  repository: kielniakodu/k8s-node-app
+  tag: 0.0.3
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 3000
+ingress:
+  enabled: true
