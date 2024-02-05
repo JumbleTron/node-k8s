@@ -21,11 +21,6 @@ docker push docker_hub_repo:latest
 kubectl apply -f ./k8s/app-pod.yaml
 ```
 
-### Port forwart to ingress
-```
-kubectl port-forward pod/cart-service 8080:3000
-```
-
 ### Delete nodejs pod
 
 ```
@@ -70,6 +65,24 @@ kubectl delete -f ./k8s/app-deployment.yaml
 
 ```
 minikube addons enable ingress
+```
+
+### Create service
+
+```
+kubectl delete -f ./k8s/app-service.yaml
+```
+
+### Create ingress
+
+```
+kubectl delete -f ./k8s/app-ingress.yaml
+```
+
+### Create ingress with rewrite
+
+```
+kubectl delete -f ./k8s/app-ingress-rewrite.yaml
 ```
 
 ### Open tunnel for minikube
