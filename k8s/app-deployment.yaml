@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
         - name: cart-service-container
-          image: kielniakodu/k8s-node-app:0.0.2
+          image: kielniakodu/k8s-node-app:0.0.3
           ports:
             - containerPort: 3000
