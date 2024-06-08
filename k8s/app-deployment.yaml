@@ -7,8 +7,8 @@ metadata:
     tier: backend
 spec:
   replicas: 2
-  #strategy:
-    #type: RollingUpdate
+  strategy:
+    type: RollingUpdate
     #rollingUpdate:
     #  maxUnavailable: 2
     #  maxSurge: 1
